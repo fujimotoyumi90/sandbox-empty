@@ -1,0 +1,302 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+	color:#252525;
+	font-size:16px;
+	line-height: 1.6;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 900px;
+}
+
+h1{color: white;}
+h3{color: #946243;}
+
+/* 
+各パートにパディング、背景、テキスト色などを指定する
+<div class="container">の子要素に指定する
+*/
+
+header {
+	padding: 10px 10px 5px 10px;
+	background: #d0af4c;
+}
+
+
+footer {
+	padding: 20px 16px 10px 16px;
+	background: #96514d;
+}
+
+/* ヘッダーへハンバーガーメニュー */
+.hamburger {
+	border: none;
+	width: 50px;
+	height: 50px;
+	background: url(../img/hamburger.png) no-repeat;
+	background-size: contain;
+}
+
+/* ナビゲーション */
+nav {
+	background-color: #96514d;
+}
+.navbar {
+	display: none;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background-color: #96514d;
+}
+.navbar li a {
+	display: block;
+	padding: 10px 15px;
+	color: #fff;
+	text-decoration: none;
+	border-right: solid 1px;
+}
+.navbar li a:hover {
+	background: #fef4f4;
+	color: #96514d;
+}
+
+/* ヘッダーを画面上部に固定 */
+@media screen and (min-width: 768px) {
+	.position-lock {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+}
+
+/* PC-SP分け */
+
+@media screen and (min-width: 768px) {
+.sp {display:none;} /*PCで非表示にするスマホ用コンテンツ*/
+}
+
+@media screen and (max-width: 768px) {
+.pc {display:none;} /*スマホ非表示にするPC用コンテンツ*/
+}
+
+.space{
+	margin-top: 125px;
+}
+
+
+main {
+	padding: 20px 10px 20px 10px;
+	background: #fff;
+	
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+	
+/* ナビゲーション */
+.hamburger {
+	display: none;
+}
+.navbar {
+	display: flex !important;
+}
+
+}
+
+
+
+/* そのたCSS */
+html{
+scroll-behavior: smooth;
+}
+
+a:hover img {
+filter: alpha(opacity=70);
+-moz-opacity: 0.6;
+opacity: 0.6;
+}
+
+.copyright {
+	margin: 0;
+	text-align: center;
+	color: #ffffff;
+}
+
+img{
+max-width:100%;
+height:auto;
+}
+
+.migi{
+margin:0 0 25px 25px;
+float:right;
+}
+
+.hidari{
+margin: 0 25px 25px 0;
+float: left;
+}
+
+@media only screen and (max-width:767px){
+img.migi, img.hidari{
+display:block;margin:5px auto;
+}
+.migi,.hidari{
+float:none;
+}
+}
+
+h2 {
+ color: #96514d;
+  padding: 0.5em 0;
+  border-top: solid 3px #96514d;
+  border-bottom: solid 3px #96514d;
+text-align: center;
+}
+
+.naka{
+text-align: center;
+}
+
+.txt-red {
+font-weight: bold;
+font-size: 130%;
+color: red;
+}
+
+.maru{
+	border-radius: 50%;
+}
+
+/* エリア内 */
+
+.inner {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 860px;
+}
+
+section {
+  padding: 60px 0;
+}
+
+/* 各エリアのBGカラー */
+.white-area {
+  background-color: #ffffff;
+  padding: 50px 0;
+}
+
+.blue-area {
+background: rgb(222,246,249);
+background: linear-gradient(180deg, rgba(222,246,249,1) 29%, rgba(96,157,249,1) 99%);
+padding: 50px 0;
+}
+
+.pink-area {
+  background-color: #fef4f4;
+  padding: 50px 0;
+}
+
+
+.free-area {
+  background-color: #596680;
+  padding: 15px 0;
+  color:#ffffff;
+  text-align: center;
+}
+
+/* 宇宙旅行ボックス
+------------------------- */
+
+.travel {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+
+.travel .planet {
+	width: 28%;
+}
+
+
+.planet {
+width: 100%;
+padding: 10px 10px 0;
+background-color:  rgba(255, 255, 255, 0.5);
+margin-bottom: 20px;
+border-radius:10px;
+border: 3px solid #96514d;
+}
+
+
+.planet-name{
+color:#96514d;
+font-weight: bold;
+font-size: 18px;
+text-align: center;
+}
+
+.planet-img {
+padding: 0;
+margin-bottom: 10px;
+text-align: center;
+}
+
+
+@media screen and (max-width: 767px) {
+  .travel {
+    flex-direction: column;
+  }
+	
+  .travel .planet {
+    width: 95%;
+  }
+}
+
+
+/* 共通　フレックスボックスレイアウト */
+.item {
+  width: 260px;
+}
+.item-img {
+  width: 250px;
+  margin: 0 auto;
+}
+.item-body {
+  padding: 0;
+}
+.item-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #003366;
+}
+.item-body p {
+  font-size: 14px;
+  color: #333;
+margin-top: 0;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+	flex-wrap: wrap;
+}
+.items .item {
+  margin: 10px
+}
+
+/* FREEボックス */
+.free{
+	background-color: #fff;
+	max-width: 700px;
+	margin: 0 auto;
+	border-radius: 20px;
+	padding: 20px;
+}
